@@ -1,0 +1,44 @@
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          netflix:
+            zuul: trace
+server:
+  port: 9000
+spring:
+  application:
+    name: api-zuul
+  sleuth:
+    enabled: true
+    sampler:
+      rate: 1
+  boot:
+    admin:
+      client:
+        url:
+        - http://localhost:7000
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - '*'
+zuul:
+  ignored-services: '*'
+  prefix: /api
+  routes:
+    account-service:
+      path: /accounts/**
+      service-id: account-service
+    customer-service:
+      path: /customers/**
+      service-id: customer-service
+    todo-jpa:
+      path: /todo-jpa/**
+      service-id: todo-jpa
+    petvisit-microservice:
+      path: /visit/**
+      service-id: petvisit-microservice
+    
