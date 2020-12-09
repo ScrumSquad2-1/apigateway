@@ -29,16 +29,18 @@ zuul:
   ignored-services: '*'
   prefix: /api
   routes:
-    account-service:
-      path: /accounts/**
-      service-id: account-service
-    customer-service:
-      path: /customers/**
-      service-id: customer-service
-    todo-jpa:
-      path: /todo-jpa/**
-      service-id: todo-jpa
     petvisit-microservice:
       path: /visit/**
       service-id: petvisit-microservice
-    
+    pet-appointment:
+      path: /appointment/**
+      service-id: pet-appointment
+    doctor-service:
+      path: /doctor/**
+      service-id: doctor-service
+    customer-service:
+      path: /customer/**
+      service-id: customer-service
+    pet-clinic-project:
+      path: /pet/**
+      service-id: pet-clinic-project
