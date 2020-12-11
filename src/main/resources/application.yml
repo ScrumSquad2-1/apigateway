@@ -29,9 +29,9 @@ zuul:
   ignored-services: '*'
   prefix: /api
   routes:
-    petvisit-microservice:
+    pet-visit:
       path: /visit/**
-      service-id: petvisit-microservice
+      service-id: pet-visit
     pet-appointment:
       path: /appointment/**
       service-id: pet-appointment
@@ -41,6 +41,6 @@ zuul:
     customer-service:
       path: /customer/**
       service-id: customer-service
-    pet-clinic-project:
+    pet-microservice:
       path: /pet/**
-      service-id: pet-clinic-project
+      service-id: pet-microservice
